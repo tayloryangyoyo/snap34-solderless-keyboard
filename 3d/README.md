@@ -1,18 +1,18 @@
-# 3D Files And References
+# 3D 檔案與參考資料
 
-Place Fusion 360 files, STEP files, STL files, screenshots, renders, and reference images here.
+這個資料夾用來放 Fusion 360 檔、STEP、STL、截圖、渲染圖與參考照片。
 
-Suggested contents:
+建議內容：
 
-- Fusion 360 source files
-- Exported STEP files
-- Printable STL files
-- Assembly renders
-- Exploded-view images
-- Photos of printed prototypes
+- Fusion 360 原始檔
+- 匯出的 STEP 檔
+- 可列印 STL 檔
+- 組裝渲染圖
+- 爆炸圖
+- 列印原型照片
 
-Current reference images:
+目前參考資料：
 
-- `pin-socket-reference.png` - pin/socket dimensions and internal spring contact reference
-- `copper-foil-reference.png` - copper foil tape reference
-- `reference-photos/` - prototype photos showing copper foil traces, pin holes, and the printed keyboard base
+- `pin-socket-reference.png` - pin/socket 尺寸與內部彈片接觸參考
+- `copper-foil-reference.png` - 銅箔膠帶參考
+- `reference-photos/` - 原型照片，展示銅箔走線、pin 孔位與 3D 列印鍵盤底座

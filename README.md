@@ -1,114 +1,110 @@
-# Solderless 3D-Printed Keyboard Contact Concept
+# 免焊接 3D 列印鍵盤接觸結構概念
 
-This repository stores the concept for a keyboard that can be built without soldering by combining:
+這個 repo 用來保存一個「不用焊接也能做鍵盤」的概念。
 
-- a 3D-printed base
-- copper foil tape used as conductive traces
-- press-fit pins or pin sockets
-- the natural spring/flex of printed plastic
-- off-the-shelf keyboard parts and controller modules
+核心想法是把 3D 列印件當成機械式接觸座：在列印底座上預留 pin 或 socket 的插入口，洞口上方或周圍貼銅箔，接著把 pin 硬壓進孔裡。pin 進入時會把銅箔壓在塑膠孔壁上，而 3D 列印塑膠本身的彈性會持續提供接觸壓力。之後需要接上的零件就可以插進這個 pin/socket 使用，不需要焊接。
 
-The key idea is to make the 3D-printed part act like a mechanical contact fixture. The printed base has holes for pins. Copper foil is placed over or around the hole. When the pin is pressed into the hole, the plastic flexes and keeps pressure on the pin, while the pin clamps against the copper foil. Components can then be plugged into those pins without soldering.
+## 使用材料
 
-## Reference Images
+- 3D 列印底座
+- 銅箔膠帶作為導電走線
+- 壓入式 pin、pin socket，或類似彈片接觸件
+- 3D 列印塑膠本身的彈性
+- 市售鍵盤零件與預焊好的控制器模組
 
-Pin/socket reference:
+## 參考圖片
 
-![Pin socket reference](3d/pin-socket-reference.png)
+pin/socket 參考：
 
-Copper foil reference:
+![pin/socket 尺寸參考](3d/pin-socket-reference.png)
 
-![Copper foil reference](3d/copper-foil-reference.png)
+銅箔參考：
 
-Prototype photos:
+![銅箔膠帶參考](3d/copper-foil-reference.png)
 
-![Copper foil matrix on printed base](3d/reference-photos/PXL_20260612_235233581.jpg)
+原型照片：
 
-![Pin holes and foil contact detail](3d/reference-photos/PXL_20260613_121004665.jpg)
+![3D 列印底座上的銅箔矩陣](3d/reference-photos/PXL_20260612_235233581.jpg)
 
-![Copper foil routing and diode contact network](3d/reference-photos/PXL_20260612_235321997.jpg)
+![pin 孔位與銅箔接觸細節](3d/reference-photos/PXL_20260613_121004665.jpg)
 
-## Mechanism
+![銅箔走線與二極體接觸網路](3d/reference-photos/PXL_20260612_235321997.jpg)
 
-1. Print a base with accurately sized pin holes.
-2. Apply copper foil tape on top of the printed base to create traces.
-3. Place the copper foil so it crosses or wraps around each pin-entry hole.
-4. Push the pin into the hole.
-5. The pin compresses the copper foil against the plastic wall.
-6. The elastic force of the printed plastic keeps contact pressure on the pin.
-7. Switches, diodes, controller wires, or other parts can be inserted into the exposed pin/socket.
+## 接觸原理
 
-In short: the electrical connection is created by pressure, not solder.
+1. 3D 列印一個有精準孔位的底座。
+2. 在底座表面貼上銅箔膠帶，形成鍵盤需要的導電走線。
+3. 讓銅箔通過 pin 插入口，或包覆在插入口附近。
+4. 把 pin 從孔位硬壓進去。
+5. pin 會把銅箔壓向孔壁。
+6. 塑膠孔壁因為彈性變形，會持續把 pin 和銅箔壓在一起。
+7. 開關、二極體、控制器線材或其他零件就可以插到露出的 pin/socket 上。
 
-## Why This Is Interesting
+簡單說，這個設計是用「壓力」形成電氣連接，而不是用焊錫。
 
-Traditional DIY keyboards usually need soldering for switches, diodes, wires, or controller headers. This concept tries to replace those solder joints with a printed mechanical structure.
+## 為什麼這個概念有趣
 
-Benefits if it works well:
+一般 DIY 鍵盤通常需要焊接開關、二極體、線材或控制器排針。這個概念嘗試把焊點改成 3D 列印出來的機械接觸結構。
 
-- no soldering iron required
-- easy to prototype with 3D printing
-- traces can be changed by re-taping copper foil
-- parts can be removed and replaced
-- the keyboard body and contact system can be designed together
+如果做得穩定，可能有幾個優點：
 
-## Suggested Parts
+- 不需要烙鐵
+- 可以用 3D 列印快速打樣
+- 走線可以靠重貼銅箔修改
+- 零件可以拆下、替換、重插
+- 鍵盤外殼、定位板和接觸結構可以一起設計
 
-- 3D-printed base and switch plate
-- copper foil tape
-- press-fit pins, pin sockets, or similar spring contacts
-- MX-compatible switches
-- diodes, if using a keyboard matrix
-- pre-soldered microcontroller module
-- jumper wires or plug-in leads
-- screws, heat-set inserts, or clips for assembly
+## 建議零件方向
 
-## 3D Design Requirements
+- 3D 列印底座與鍵盤定位板
+- 銅箔膠帶
+- 壓入式 pin、pin socket 或類似彈簧接點
+- MX 相容機械軸
+- 鍵盤矩陣用二極體
+- 預焊好的 microcontroller 模組
+- 跳線或可插拔線材
+- 螺絲、熱熔銅螺母、卡扣或磁吸結構
 
-The 3D model should include:
+## 3D 設計需求
 
-- pin insertion holes with controlled diameter
-- small relief gaps so the plastic can flex slightly
-- channels or flat areas for copper foil traces
-- switch cutouts or switch mounting features
-- space for a controller module
-- cable-routing paths
-- access for testing and replacing pins
+3D 模型需要考慮：
 
-The hole size is the most important detail. It should be tight enough to hold the pin and copper foil under pressure, but not so tight that the plastic cracks or the copper foil tears.
+- pin 插入口的孔徑公差
+- 讓塑膠可以微幅變形的釋放槽或彈性區
+- 銅箔走線需要的平面或淺槽
+- 軸體安裝孔或定位板結構
+- 控制器模組安裝空間
+- 線材走線空間
+- 可以測試與更換 pin 的維修空間
 
-## Prototype Notes
+孔徑是最重要的設計參數。孔要夠緊，才能讓 pin、銅箔與塑膠之間維持壓力；但也不能緊到讓塑膠裂開或把銅箔刮破。
 
-The photos for this concept show a printed keyboard base with copper foil traces laid across the bottom side. Pins are pressed through prepared holes, and the copper foil becomes the row/column wiring. The visible diode legs and copper tape demonstrate the same no-PCB direction: the printed body carries the mechanical layout, while copper foil and pins create the electrical network.
+## 原型紀錄
 
-The prototype images in `3d/reference-photos/` document the current physical approach:
+目前的原型照片放在 `3d/reference-photos/`。
 
-- copper foil strips form the long row/column traces
-- small holes receive press-fit pins or sockets
-- the printed plastic body provides mechanical spring pressure
-- diodes and switch contacts can be connected through the pressure-fit pins
-- the top side remains a printed switch plate/body, while the underside carries the foil routing
+照片中可以看到 3D 列印的鍵盤底座，以及貼在底部的銅箔走線。pin 從預留孔位壓入後，銅箔就成為 row/column 的電氣網路。照片裡的二極體腳、銅箔與孔位展示的是同一個方向：讓列印件負責機械定位，讓銅箔與 pin 負責導電接觸。
 
-Current concept assumptions:
+目前概念假設：
 
-- plastic spring force provides contact pressure
-- copper foil is the conductive path
-- the pin is the reusable plug-in contact point
-- no solder is needed during normal assembly
-- the design can be revised by changing the printed base and foil routing
+- 塑膠彈性可以提供足夠接觸壓力
+- 銅箔是主要導電路徑
+- pin 是可重複插拔的接點
+- 一般組裝過程不需要焊接
+- 改版時可以只修改 3D 模型與銅箔走線
 
-## Repository Structure
+## Repo 結構
 
-- `README.md` - main concept notes
-- `3d/` - Fusion 360 files, STEP/STL exports, renders, and reference images
-- `LICENSE` - license for the notes and files
+- `README.md` - 主要概念說明
+- `3d/` - Fusion 360、STEP/STL、渲染圖與參考照片
+- `LICENSE` - 授權文件
 
-## Future Work
+## 待驗證事項
 
-- Add Fusion 360 source model
-- Add printable STL prototype
-- Add pin-hole tolerance test model
-- Add copper foil routing examples
-- Add photos of the prototype build
-- Measure contact resistance before and after repeated insertion
-- Test whether heat, humidity, and plastic creep reduce contact pressure over time
+- 加入 Fusion 360 原始模型
+- 加入可列印 STL 原型
+- 製作 pin 孔徑公差測試件
+- 補充銅箔走線範例
+- 測量接觸電阻
+- 測試多次插拔後的可靠度
+- 測試熱、濕度與塑膠蠕變是否會降低接觸壓力

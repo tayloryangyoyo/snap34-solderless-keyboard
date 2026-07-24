@@ -1,19 +1,19 @@
-# Prototype Reference Photos
+# 原型參考照片
 
-These photos document the current solderless contact concept.
+這些照片記錄目前的免焊接觸結構概念。
 
-The prototype uses a 3D-printed keyboard base with holes for pins or sockets. Copper foil tape is placed across the holes as the conductive path. When a pin is pushed into the hole, the printed plastic flexes and presses the pin against the copper foil.
+原型使用 3D 列印鍵盤底座，並在底座上預留 pin 或 socket 的孔位。銅箔膠帶貼在孔位上方或周圍作為導電路徑。當 pin 壓入孔中時，3D 列印塑膠會微幅變形，並把 pin 持續壓向銅箔。
 
-## Photo Notes
+## 照片說明
 
-- `PXL_20260611_232243703.jpg` - close view of copper foil traces, diode placement, and pin contact points
-- `PXL_20260611_232247610.jpg` - additional close view of the early contact layout
-- `PXL_20260611_232250849.jpg` - additional prototype detail from the same build stage
-- `PXL_20260612_235233581.jpg` - full underside view of the split keyboard copper foil matrix
-- `PXL_20260612_235239652.jpg` - center routing area and copper foil junctions
-- `PXL_20260612_235304012.jpg` - printed plate/base alignment with underside contact layer
-- `PXL_20260612_235314342.jpg` - top side of the printed base showing hole pattern and layout
-- `PXL_20260612_235321997.jpg` - wide view of the copper foil routing and diode contact network
-- `PXL_20260613_120848703.jpg` - later prototype detail
-- `PXL_20260613_121001506.jpg` - later prototype detail
-- `PXL_20260613_121004665.jpg` - close view of copper foil over pin holes
+- `PXL_20260611_232243703.jpg` - 銅箔走線、二極體位置與 pin 接觸點近照
+- `PXL_20260611_232247610.jpg` - 早期接觸結構的補充近照
+- `PXL_20260611_232250849.jpg` - 同一階段的原型細節
+- `PXL_20260612_235233581.jpg` - split keyboard 底部銅箔矩陣全景
+- `PXL_20260612_235239652.jpg` - 中央走線區與銅箔交會處
+- `PXL_20260612_235304012.jpg` - 列印板件與底部接觸層的對位關係
+- `PXL_20260612_235314342.jpg` - 列印底座上側，展示孔位與鍵盤布局
+- `PXL_20260612_235321997.jpg` - 銅箔走線與二極體接觸網路的寬幅照片
+- `PXL_20260613_120848703.jpg` - 後續原型細節
+- `PXL_20260613_121001506.jpg` - 後續原型細節
+- `PXL_20260613_121004665.jpg` - 銅箔覆蓋 pin 孔位的近照
