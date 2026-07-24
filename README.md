@@ -1,77 +1,98 @@
-# Solderless 3D-Printed Keyboard Concept
+# Solderless 3D-Printed Keyboard Contact Concept
 
-This repository is a concept space for a keyboard that can be built without soldering.
+This repository stores the concept for a keyboard that can be built without soldering by combining:
 
-The idea is simple: use 3D-printed parts for the body and switch plate, then combine them with off-the-shelf keyboard parts that already have connectors, sockets, or screw terminals. The goal is not to design a full PCB from scratch. The goal is to make a keyboard that a hobbyist can assemble with printed parts, screws, switches, keycaps, and ready-made electronic modules.
+- a 3D-printed base
+- copper foil tape used as conductive traces
+- press-fit pins or pin sockets
+- the natural spring/flex of printed plastic
+- off-the-shelf keyboard parts and controller modules
 
-## Concept
+The key idea is to make the 3D-printed part act like a mechanical contact fixture. The printed base has holes for pins. Copper foil is placed over or around the hole. When the pin is pressed into the hole, the plastic flexes and keeps pressure on the pin, while the pin clamps against the copper foil. Components can then be plugged into those pins without soldering.
 
-Most DIY keyboards require soldering switches, diodes, controllers, or wires. This concept avoids that by using parts that can be plugged, screwed, clipped, or pressed together.
+## Reference Images
 
-Possible approaches:
+Pin/socket reference:
 
-- Use a prebuilt hot-swap keyboard PCB or hot-swap macro pad PCB.
-- Use hot-swap switch sockets mounted into a 3D-printed plate or carrier.
-- Use a ready-made microcontroller board with USB-C.
-- Use jumper wires, screw terminals, or pre-crimped cables instead of soldered wires.
-- Use 3D-printed brackets to hold modules in place.
-- Use screws, heat-set inserts, magnets, or clips for the case.
+![Pin socket reference](3d/pin-socket-reference.png)
+
+Copper foil reference:
+
+![Copper foil reference](3d/copper-foil-reference.png)
+
+## Mechanism
+
+1. Print a base with accurately sized pin holes.
+2. Apply copper foil tape on top of the printed base to create traces.
+3. Place the copper foil so it crosses or wraps around each pin-entry hole.
+4. Push the pin into the hole.
+5. The pin compresses the copper foil against the plastic wall.
+6. The elastic force of the printed plastic keeps contact pressure on the pin.
+7. Switches, diodes, controller wires, or other parts can be inserted into the exposed pin/socket.
+
+In short: the electrical connection is created by pressure, not solder.
+
+## Why This Is Interesting
+
+Traditional DIY keyboards usually need soldering for switches, diodes, wires, or controller headers. This concept tries to replace those solder joints with a printed mechanical structure.
+
+Benefits if it works well:
+
+- no soldering iron required
+- easy to prototype with 3D printing
+- traces can be changed by re-taping copper foil
+- parts can be removed and replaced
+- the keyboard body and contact system can be designed together
+
+## Suggested Parts
+
+- 3D-printed base and switch plate
+- copper foil tape
+- press-fit pins, pin sockets, or similar spring contacts
+- MX-compatible switches
+- diodes, if using a keyboard matrix
+- pre-soldered microcontroller module
+- jumper wires or plug-in leads
+- screws, heat-set inserts, or clips for assembly
+
+## 3D Design Requirements
+
+The 3D model should include:
+
+- pin insertion holes with controlled diameter
+- small relief gaps so the plastic can flex slightly
+- channels or flat areas for copper foil traces
+- switch cutouts or switch mounting features
+- space for a controller module
+- cable-routing paths
+- access for testing and replacing pins
+
+The hole size is the most important detail. It should be tight enough to hold the pin and copper foil under pressure, but not so tight that the plastic cracks or the copper foil tears.
+
+## Prototype Notes
+
+The photos for this concept show a printed keyboard base with copper foil traces laid across the bottom side. Pins are pressed through prepared holes, and the copper foil becomes the row/column wiring. The visible diode legs and copper tape demonstrate the same no-PCB direction: the printed body carries the mechanical layout, while copper foil and pins create the electrical network.
+
+Current concept assumptions:
+
+- plastic spring force provides contact pressure
+- copper foil is the conductive path
+- the pin is the reusable plug-in contact point
+- no solder is needed during normal assembly
+- the design can be revised by changing the printed base and foil routing
 
 ## Repository Structure
 
-- `README.md` - the main concept and build direction
-- `3d/` - place for Fusion 360 files, STEP files, STL files, renders, and 3D reference images
-- `LICENSE` - license for the concept notes and files
+- `README.md` - main concept notes
+- `3d/` - Fusion 360 files, STEP/STL exports, renders, and reference images
+- `LICENSE` - license for the notes and files
 
-## Parts Direction
+## Future Work
 
-This project should prefer parts that are easy to buy and do not require custom electronics manufacturing.
-
-Examples:
-
-- MX-compatible mechanical switches
-- Keycaps
-- Hot-swap sockets or a prebuilt hot-swap PCB
-- A USB-C microcontroller board
-- Pre-crimped jumper wires
-- Screw terminal blocks
-- M2 or M3 screws
-- Heat-set inserts
-- Rubber feet
-- 3D-printed case and plate parts
-
-## Build Direction
-
-1. Design the keyboard shell and switch plate in Fusion 360.
-2. 3D print the case, plate, and any brackets needed to hold modules.
-3. Install heat-set inserts or use self-tapping screws.
-4. Press switches into the printed plate or hot-swap PCB.
-5. Mount the ready-made electronics inside the case.
-6. Connect modules with plug-in cables, jumper wires, or screw terminals.
-7. Close the case and test the keyboard.
-
-## Design Notes
-
-- The 3D model should leave enough room for switch pins, sockets, wires, and connectors.
-- The case should make the electronics easy to remove and replace.
-- The design should avoid glue where possible.
-- The first prototype can be chunky. Reliability matters more than thinness.
-- If a part normally needs soldering, look for a pre-soldered version or a connector-based alternative.
-
-## 3D Files
-
-Put future Fusion 360, STEP, STL, and render files in `3d/`.
-
-Suggested file names:
-
-- `keyboard-concept.f3d`
-- `keyboard-case.step`
-- `keyboard-case.stl`
-- `plate.stl`
-- `module-bracket.stl`
-- `render-front.png`
-- `render-exploded.png`
-
-## Status
-
-This is an early concept repository. It is meant to collect the idea, structure, and future 3D design files before becoming a finished build guide.
+- Add Fusion 360 source model
+- Add printable STL prototype
+- Add pin-hole tolerance test model
+- Add copper foil routing examples
+- Add photos of the prototype build
+- Measure contact resistance before and after repeated insertion
+- Test whether heat, humidity, and plastic creep reduce contact pressure over time
