@@ -15,3 +15,4 @@ Current reference images:
 
 - `pin-socket-reference.png` - pin/socket dimensions and internal spring contact reference
 - `copper-foil-reference.png` - copper foil tape reference
+- `reference-photos/` - prototype photos showing copper foil traces, pin holes, and the printed keyboard base

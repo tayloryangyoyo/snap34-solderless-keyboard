@@ -20,6 +20,14 @@ Copper foil reference:
 
 ![Copper foil reference](3d/copper-foil-reference.png)
 
+Prototype photos:
+
+![Copper foil matrix on printed base](3d/reference-photos/PXL_20260612_235233581.jpg)
+
+![Pin holes and foil contact detail](3d/reference-photos/PXL_20260613_121004665.jpg)
+
+![Copper foil routing and diode contact network](3d/reference-photos/PXL_20260612_235321997.jpg)
+
 ## Mechanism
 
 1. Print a base with accurately sized pin holes.
@@ -72,6 +80,14 @@ The hole size is the most important detail. It should be tight enough to hold th
 ## Prototype Notes
 
 The photos for this concept show a printed keyboard base with copper foil traces laid across the bottom side. Pins are pressed through prepared holes, and the copper foil becomes the row/column wiring. The visible diode legs and copper tape demonstrate the same no-PCB direction: the printed body carries the mechanical layout, while copper foil and pins create the electrical network.
+
+The prototype images in `3d/reference-photos/` document the current physical approach:
+
+- copper foil strips form the long row/column traces
+- small holes receive press-fit pins or sockets
+- the printed plastic body provides mechanical spring pressure
+- diodes and switch contacts can be connected through the pressure-fit pins
+- the top side remains a printed switch plate/body, while the underside carries the foil routing
 
 Current concept assumptions:
 
